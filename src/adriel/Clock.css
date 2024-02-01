@@ -1,0 +1,42 @@
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hand {
+    position: absolute;
+    /* 시계의 중앙부터 시작하도록 수정 */
+    bottom: 50%;
+    /* 바늘의 너비를 시각적으로 적절하게 조정 */
+    width: 5px;
+    /* 시계의 중앙부터 바늘의 끝까지의 길이를 조정 */
+    height: 40%;
+    background: black;
+    /* 바늘의 회전 축을 바닥에서 가장 끝쪽으로 설정 */
+    transform-origin: bottom;
+    /* 바늘이 정중앙에서 시작하도록 조정 */
+    transform: translateX(-50%);
+}
+
+.hand.minute {
+    height: 45%;
+    background: grey;
+}
+
+.hand.second {
+    height: 50%;
+    background: red;
+}
+
+.tooltip {
+    position: fixed;
+    background: lightgray;
+    padding: 5px;
+    border-radius: 5px;
+}
